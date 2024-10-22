@@ -15,7 +15,7 @@ public class BestAlbum {
         }
 
         List<String> genreOrder = new ArrayList<>(count.keySet());
-        genreOrder.sort((a, b) -> count.get(b) - count.get(a));
+        genreOrder.sort(Collections.reverseOrder());
         List<Integer> answerList = new ArrayList<>();
         for (String genre : genreOrder) {
             PriorityQueue<int[]> pq = songList.get(genre);
@@ -26,11 +26,6 @@ public class BestAlbum {
             }
         }
 
-        int[] answer = new int[answerList.size()];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = answerList.get(i);
-        }
-
-        return answer;
+        return answerList.stream().mapToInt(i -> i).toArray();
     }
 }
