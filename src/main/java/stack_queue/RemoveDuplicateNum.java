@@ -1,10 +1,10 @@
-package StackAndQueue;
+package stack_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class RemoveDuplicateNum {
-    public int[] solution(int []arr) {
+    public int[] solution(int[] arr) {
         int[] answer = {};
 
         Queue<Integer> queue = new LinkedList<>();
