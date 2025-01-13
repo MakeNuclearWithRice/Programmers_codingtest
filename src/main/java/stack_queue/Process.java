@@ -3,7 +3,7 @@ package stack_queue;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class process {
+public class Process {
     public int solution(int[] priorities, int location) {
 
         int answer = 0;
