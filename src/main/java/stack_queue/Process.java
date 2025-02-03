@@ -13,6 +13,8 @@ public class Process {
             pq.add(num);
         }
 
+
+
         while(!pq.isEmpty()) {
             for(int i=0; i<priorities.length; i++) {
                 if(priorities[i] == pq.peek()) {
